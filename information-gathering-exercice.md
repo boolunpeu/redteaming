@@ -31,7 +31,7 @@
 8. Which of the BeCode partners begins with the letter `p` and ends with the letter `t`?
 
 > PHITRUST
-i
+
 9. Who are the founders of BeCode?
 
 > Karen Boers, Laurent Hublet and Rodolphe Verhaegen
