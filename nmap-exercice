@@ -1,0 +1,79 @@
+
+
+    How many tcp ports are open on the box? What command did you use?
+
+        > 28 `nmap  -p- 10.12.1.36`  
+
+    How many udp ports are open on the box? What command did you use?
+
+        >  8  `sudo nmap -sU 10.12.1.36
+
+    What is the version of ftp?
+
+        > vsftpd 2.3.4
+
+    What is the version of ssh?
+
+        > OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+
+    What is the version of Apache?
+
+        > Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+
+    Is anonymous ftp access allowed on the box? What command did you use? (Use only nmap)
+
+        > Yes its allowed  `nmap -p 21 --script ftp-anon 10.12.1.40
+
+    Do a SYN scan. Which command did you use?
+
+        > `nmap -sS {ip}
+
+    Do a scan that bypasses a firewall. What command did you use?
+
+        > `nmap -sS --source-port 80 10.12.1.40` wich make believe to the firewall that the packet come from the port 80 (wich is generally open) 
+        > or nmap -sS -D RND:10 10.12.1.36 -D RND:10: Uses 10 random decoy IP addresses or nmap -sS -f 10.12.1.36 -f: Fragments the packets to try to get past the firewall
+
+
+    Run a scan with the default NSE scripts. Which flag do you use?
+
+        >  nmap -sC 10.12.1.40 or nmap --script=default 10.12.1.40
+
+    What service occupies port 8180?
+
+        > 8180/tcp open  unknown
+          |_http-title: Apache Tomcat/5.5
+          |_http-favicon: Apache Tomcat
+ 
+    What is the salt of the mysql service?
+
+        > Salt: j}Ur[Tq[V~60,.@9;^G) or Salt: #QP{>`H)0WF6}601C=H3
+        > `nmap -p 3306 --script mysql-info 10.12.1.36
+
+    What is the domain name ?
+
+        > Host 36.1.12.10.in-addr.arpa. not found: 3(NXDOMAIN) | There is no PTR record for the ip address.
+
+    What is the FQDN of the box ?
+
+        > No PTR record  
+
+    What is the os version ?
+
+        > Your response
+
+    What is the version of Samba ?
+
+        > Your response
+
+    Wat is the name of the box ?
+
+        > METASPLOITABLE
+
+    Do a scan on the subnet 10.xx.1.0/24. How many IP addresses respond? What command did you use? Charleroi : 10.11.0.1/24 Bruxelles : 10.12.0.1/24 Ghent : 10.13.0.1/24
+
+        > Your response
+
+    Do the same thing but with the top port option at 10. What command did you use?
+
+        > Your response
+
