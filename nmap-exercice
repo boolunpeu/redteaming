@@ -40,9 +40,8 @@
 
     What service occupies port 8180?
 
-        > 8180/tcp open  unknown
-          |_http-title: Apache Tomcat/5.5
-          |_http-favicon: Apache Tomcat
+        > 8180/tcp open  unknown | Apache Tomcat/Coyote JSP engine 1.1
+
  
     What is the salt of the mysql service?
 
@@ -59,11 +58,11 @@
 
     What is the os version ?
 
-        > Your response
+        > Unix, Linux
 
     What is the version of Samba ?
 
-        > Your response
+        > Samba smbd 3.0.20-Debian
 
     Wat is the name of the box ?
 
@@ -71,9 +70,16 @@
 
     Do a scan on the subnet 10.xx.1.0/24. How many IP addresses respond? What command did you use? Charleroi : 10.11.0.1/24 Bruxelles : 10.12.0.1/24 Ghent : 10.13.0.1/24
 
-        > Your response
+        > nmap -p- 10.11.0.1/24                                                               ─╯
+         4 host up
 
-    Do the same thing but with the top port option at 10. What command did you use?
+        >nmap -p- 10.12.0.1/24
+         6 host up 
 
-        > Your response
+        >nmap -p- 10.13.0.1/24 
+         4 host up 
+    
+Do the same thing but with the top port option at 10. What command did you use?
+
+        > nmap --top-port 10 {ip/24}
 
